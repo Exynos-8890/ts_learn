@@ -26,6 +26,18 @@
 - 本项目已包含 `tests/` 目录，直接运行：`bun test`
 - 持续测试：`bun test --watch`
 
+测试常用命令（fish）：
+- 去掉彩色输出（便于日志/CI）：
+  - `bun test --no-color`
+- 只跑某个测试文件：
+  - `bun test tests/01_variables.test.js`
+- 只跑并去除颜色：
+  - `bun test --no-color tests/01_variables.test.js`
+- 持续监听并单文件：
+  - `bun test --watch tests/01_variables.test.js`
+
+注意：不要用 `bun run tests/xxx.test.js` 来执行测试文件，请始终使用 `bun test` 子命令。
+
 项目结构说明：
 - `chapters/` 教程（含 Python/C++ 对比）
 - `exercises/` 每章配套的填空练习（把 `___` 替换成正确答案）
